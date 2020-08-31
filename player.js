@@ -9,7 +9,7 @@ class Player extends HTMLElement {
 
     }
     static get observedAttributes() {
-        return ["img","name","point"];
+        return ["img","name","point","key"];
     }
     set point(newVal){
         return this.setAttribute("point", newVal);
@@ -17,6 +17,7 @@ class Player extends HTMLElement {
     get point(){
         return this.getAttribute("point");
     }
+    
     render(){
         this.$img.src=this.getAttribute("img");
         this.$name.innerHTML=this.getAttribute("name");
